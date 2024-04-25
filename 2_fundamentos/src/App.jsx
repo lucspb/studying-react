@@ -10,6 +10,9 @@ import Counter from './components/Counter';
 import UserInfoForm from './components/UserInfoForm';
 import Button from './components/Button';
 import PaiFunction from './components/PaiFunction';
+import Form from './components/Form';
+import RenderCondicional from './components/RenderCondicional';
+import LoginButton from './components/LoginButton';
 
 
 function App() {
@@ -44,7 +47,15 @@ function App() {
       {/* 6.9 - passando funcoes de manipulacao de eventos como props */}
       <PaiFunction/>
 
-      {/* 7.0 - Eventos de Form */}
+      {/* 6.10 - Eventos de Form */}
+      <Form/>
+
+      {/* 6.11 - Renderização condicional */}
+      <RenderCondicional user="Lucas"/>
+
+      {/* 6.12 - expressao ternaria */}
+      <LoginButton loggedIn={true}/>
+      <LoginButton loggedIn={false}/>
 
     </>
   )
