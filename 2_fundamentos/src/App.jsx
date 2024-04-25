@@ -6,6 +6,8 @@ import BomDia from './components/BomDia';
 import Pai from './components/Pai'
 import Descricao from './components/Descricao';
 import Cachorro from './components/Cachorro';
+import Counter from './components/Counter';
+import UserInfoForm from './components/UserInfoForm';
 
 
 function App() {
@@ -27,6 +29,12 @@ function App() {
 
       {/* 6.5 - Desestruturação de Props */}
       <Cachorro nome="Dumbo" raca="pinschie"/>
+
+      {/* 6.6 - useState => hook */}
+      <Counter/>
+
+      {/* 6.7 - multiplos estados */}
+      <UserInfoForm/>
     </>
   )
 }
