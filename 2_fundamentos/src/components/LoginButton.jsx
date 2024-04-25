@@ -1,8 +1,17 @@
 
 
-const LoginButton = ({loggedIn}) => {
+const LoginButton = ({loggedIn, user}) => {
+  const handleSair = () => {
+    console.log(user, ' saindo...')
+  }
+
+  const handleEntrar = () => {
+    console.log(user, 'entrando...')
+  }
+
+
   return (
-    <div>{loggedIn ? <button> Sair</button> : <button> Entrar</button>}</div>
+    <div>{loggedIn ? <button type="submit" onClick={handleSair}> Sair</button> : <button type="submit" onClick={handleEntrar}> Entrar</button>}</div>
   )
 }
 

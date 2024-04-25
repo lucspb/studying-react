@@ -54,8 +54,8 @@ function App() {
       <RenderCondicional user="Lucas"/>
 
       {/* 6.12 - expressao ternaria */}
-      <LoginButton loggedIn={true}/>
-      <LoginButton loggedIn={false}/>
+      <LoginButton user="Lucas" loggedIn={true}/>
+      <LoginButton user="Lucas" loggedIn={false}/>
 
     </>
   )
