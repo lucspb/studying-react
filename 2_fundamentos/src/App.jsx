@@ -8,6 +8,8 @@ import Descricao from './components/Descricao';
 import Cachorro from './components/Cachorro';
 import Counter from './components/Counter';
 import UserInfoForm from './components/UserInfoForm';
+import Button from './components/Button';
+import PaiFunction from './components/PaiFunction';
 
 
 function App() {
@@ -35,6 +37,15 @@ function App() {
 
       {/* 6.7 - multiplos estados */}
       <UserInfoForm/>
+
+      {/* 6.8 - eventos */}
+      <Button/>
+
+      {/* 6.9 - passando funcoes de manipulacao de eventos como props */}
+      <PaiFunction/>
+
+      {/* 7.0 - Eventos de Form */}
+
     </>
   )
 }
