@@ -17,6 +17,8 @@ import Warning from './components/Warning';
 import NumberList from './components/NumberList';
 import BotaoEstilizado from './components/BotaoEstilizado';
 import BotaoAzul from './components/BotaoAzul';
+import Greeting from './components/Greeting';
+import TaskList from './components/TaskList';
 
 
 function App() {
@@ -67,11 +69,15 @@ function App() {
       {/* 6.14 - listas chaves */}
       <NumberList numbers={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}/>
       
-      {/* 6.14 - estilos por atributo */}
+      {/* 6.15 - estilos por atributo */}
       <BotaoEstilizado/>
 
-      {/* 6.14 - estilos globais */}
+      {/* 6.16 - estilos globais */}
       <BotaoAzul/>
+
+      {/* 6.17 - exercicios */}
+      <Greeting name="Lucas" />
+      <TaskList tasks={["estudar react", "lavar louça", "arrumar a casa", "fazer o jantar"]} />
     </>
   )
 }
