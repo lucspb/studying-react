@@ -5,6 +5,8 @@ import Timer from './components/Timer'
 import ComponentFilho from './components/ComponentFilho'
 import { MeuContextoProvider } from './contexts/MeuContexto'
 import ValorContexto from './components/ValorContexto'
+import Contador from './components/Contador'
+import DisplayWindowSize from './components/DisplayWindowSize'
 
 function App() {
   
@@ -22,7 +24,14 @@ function App() {
         <ComponentFilho />
         <ValorContexto />
       </MeuContextoProvider>
+
+      {/* 8.3 - useducer*/}
+      {/* estados mais complexos */}
+      <Contador/>
       
+      {/* 8.4 - Custom hook*/}
+      <DisplayWindowSize/> 
+
     </>
   )
 }
