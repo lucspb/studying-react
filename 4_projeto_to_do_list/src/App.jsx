@@ -6,29 +6,37 @@ import { useState, useEffect} from 'react';
 
 function App() {
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem('tasks')) || []
+  );
+
+  useEffect(() => {
+    document.title = "Lista de Tarefas"
+
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+
+  }, [tasks])
 
   const addTask = (task) => {
 
-
-    //id, text, done
-
-
     setTasks([...tasks, {id: Date.now(), text: task, done: false}])
 
-    // localStorage
   }
 
   const removeTask = (taskId) => {
     setTasks(tasks.filter((task) => task.id !== taskId))
   }
+
+  const toggleTaskDone = (taskId) => {
+    setTasks(tasks.map((task) => task.id === taskId ? {...task, done: !task.done} : task))
   
+  }
 
   return (
     <>
      <h1>Lista de tarefas</h1>
      <TaskInput onAddTask={addTask}/>
-     <TaskList tasks={tasks} onDeleteTask={removeTask}/>
+     <TaskList tasks={tasks} onDeleteTask={removeTask} onToggleTaskDone={toggleTaskDone}/>
     </>
   )
 }
